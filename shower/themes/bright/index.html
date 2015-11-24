@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Git | FLISOL 2014</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=680, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="styles/screen.css">
+</head>
+<body class="list">
+	<!--
+		Debug class on <body> enables
+		cyan grid on slides
+		-->
+	<header class="caption">
+		<h1>Git / GitHub</h1>
+		<p><a href="http://www.facebook.com/sergio.bezerradasilva" target="_blank">Sérgio Silva</a>, FLISOL 2014.</p>
+	</header>
+	<section class="slide cover" id="Cover">
+		<div>
+			<h2>Curso Básico</h2>
+			<p class="subtitle">Git/GitHub</p>
+			<p>Por <a href="http://www.facebook.com/sergio.bezerradasilva" target="_blank">Sérgio Silva</a></p>
+			<img src="pictures/capa.jpg" alt="Git">
+			<!--
+				To apply styles to the certain slides
+				set slide ID to get needed elements
+				-->
+			<style>
+				#Cover h2 {
+					margin:30px 0 0;
+					color:#fff;
+					text-shadow: 2px 2px 2px #000;
+					text-align:center;
+					font-size:70px;
+					}
+				#Cover p {
+					margin:10px 0 0;
+					text-align:center;
+					color:#fff;
+					font-style:italic;
+					font-size:20px;
+					}
+				#Cover p a {
+					color:#fff;
+				}
+				
+				#Cover .subtitle{
+					color:#fff;
+					text-shadow: 2px 2px 2px #000;
+					font-size:50px;
+					font-weight:bold;
+					line-height:120%;
+				}
+				
+			</style>
+		</div>
+
+	</section>
+
+	<section class="slide cover" id="Picture"><div>
+		<img src="pictures/about_me.jpg" alt="Quem Sou">
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>O que vamos fazer?</h2>
+		<ul>
+			<li>O que é e o que <strong>não</strong> é Git?</li>
+			<li>Você pode utilizar Git em outras ferramentas</li>
+			<li>Quando tenho que usar Git?</li>
+			<li>Mão a obra!</li>
+			<li>Website GitHub</li>
+			<li>Criando Conta</li>
+			<li>Corporação, Time, Diretórios <i>Privates</i></li>
+		</ul>
+	</div></section>
+	
+	<section class="slide"><div>
+		<ul>
+			<li>Criando repositório de trabalho</li>
+			<li>Conceito de <i>Master</i> e <i>Branch</i> (Fluxo de Trabalho)</li>
+			<li>Populando repositório</li>
+			<li>Iniciando diretório na sua maquina</li>
+			<li>Clonando um repositório</li>
+			<li>O que é <i>Fork</i></li>
+			<li>Recebendo modificações do servidor (pull)</li>
+			<li>Adicionar e Remover</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide"><div>
+		<ul>
+			<li>Salvando modificações localmente (commit)</li>
+			<li>Enviando modificações para o servidor (push)</li>
+			<li>Sinalizando versão estável (tag)</li>
+			<li>Desfazendo modificações (reset)</li>
+			<li>Verificar status de repositório</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Não vamos fazer, mas podemos:</h2>
+		<ol>
+			<li>Voltar o diretório para um commit específico</li>
+			<li>Espurgar commits de um único membro do time</li>
+			<li>Controlar permissões por time</li>		
+		</ol>
+	</div></section>
+
+	<section class="slide shout right"><div>
+		<h2>O que é Git?</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Conceito</h2>
+		<figure>
+			<blockquote>
+				<p>é um sistema de controle de versão distribuído e um sistema de gerenciamento de código fonte, com ênfase em velocidade. O Git foi inicialmente projetado e desenvolvido por Linus Torvalds para o desenvolvimento do kernel Linux</p>
+			</blockquote>
+			<figcaption>http://pt.wikipedia.org/wiki/Git</figcaption>
+		</figure>
+	</div></section>
+
+	<section class="slide shout left"><div>
+		<h2>GitHub</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>É um tipo de serviço</h2>
+		<ul>
+			<li>Github</li>
+			<li>Bitbucket</li>
+			<li>Mercury</li>
+			<li>Assembla</li>	
+			<li>Source Forge</li>	
+		</ul>
+	</div></section>
+
+	<section class="slide shout right"><div>
+		<h2>Quando usar?</h2>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Quando preciso...</h2>
+		<ol>
+			<li>Ter um controle eficiente de versões do meu código</li>
+			<li>Desejo saber o rendimento da minha equipe</li>
+			<li>Guardar meu código em nuvem</li>
+			<li>Compartilhar um projeto</li>
+		</ol>
+	</div></section>
+	
+	<section class="slide shout up"><div>
+		<h2>Website</h2>
+	</div></section>
+	
+
+	<section class="slide cover"><div>
+		<img src="pictures/website.jpg" alt="Website do Github">
+	</div></section>
+	
+	<section class="slide shout down"><div>
+		<h2>Criando Conta</h2>
+	</div></section>
+
+	<section class="slide shout up"><div>
+		<h2>Corporação, Time, Diretórios Privados</h2>
+	</div></section>
+
+	<section class="slide shout up"><div>
+		<h2>Repositório</h2>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Clonando diretório para a máquina</h2>
+		<ul>
+			<li class="next">Primeiro crie o diretório no Github</li>
+			<li class="next">Agora é necessário inicializar o diretório em sua máquina</li>
+			<li class="next">Verifique se o git esta instalado (Unix)</li>
+			<pre>
+					<code>$ apt-get install git</code>
+					<code>$ yum install git-core</code>
+			</pre>
+		</ul>
+	</div></section>
+	
+	<section class="slide shout up"><div>
+		<h2>Fluxo de Trabalho</h2>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/fluxo_trabalho.jpg" alt="Fluxo de Trabalho">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Fluxo de Trabalho</h2>
+		<ul>
+			<li class="next">O que é a Master</li>
+			<li class="next">O que é uma Branch</li>
+			<li class="next">Para que serve uma Branch</li>
+			<li class="next">Cuidados que devemos ter (controle avançado)</li>
+			<ol>
+				<li class="next">Ao trocar de Branch</li>
+				<li class="next">Ao fazer merge</li>
+				<li class="next">Ao reverter uma modificação (commit)</li>
+			</ol>
+		</ul>
+	</div></section>
+	
+	<section class="slide shout left"><div>
+		<h2>Antes de qualquer coisa</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Informe seu usuário e senha no terminal</h2>
+		<ul>
+			<li class="next">Se não você não conseguirá enviar nenhuma alteração</li>
+			<li class="next">É arriscado enviar alterações como usuário anônimo e depois terá problemas</li>
+			<li class="next">Veja a sintaxe de cada comando:</li>
+			<pre class="next">
+					<code>$ git config --global user.name "John Doe"</code>
+			</pre>
+			<li class="next">Você informou seu nome!</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>...</h2>
+		<ul>
+			<li class="next">Agora informe seu email:</li>
+			<pre class="next">
+					<code>$ git config --global user.email johndoe@example.com</code>
+			</pre>
+			<li class="next">Você informou seu email!</li>
+			<li class="next">A senha sempre será pedida quando você enviar uma informação ao servidor!</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide shout down"><div>
+		<h2>Inicializando Repositório</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Em sua máquina...</h2>
+		<ul>
+			<li class="next">É necessário inicializar o diretório que receberá a aplicação</li>
+			<li class="next">Mas você também pode ao invés de inicializar, CLONAR o diretório</li>
+			<li class="next">Veja a sintaxe de cada comando:</li>
+			<pre class="next">
+					<code>$ git init</code>
+			</pre>
+			<li class="next">Este comando deve ser executado no diretório que você deseja versionar!</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Clonando...</h2>
+		<ul>
+			<li class="next">Ou efetuando a clonagem de um diretório já criado em seu repositório</li>
+			<li class="next">Veja a sintaxe de cada comando:</li>
+			<pre class="next">
+				<code>$ git clone /caminho/para/o/repositório</code>
+			</pre>
+			<li class="next">ou</li>
+			<pre class="next">
+				<code>$ git clone usuário@servidor:/caminho/para/o/repositório</code>
+			</pre>
+		</ul>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Onde eu pego o endereço para clonagem?</h2>
+		<ul>
+			<li class="next">Depois de criado e inicializado la no GitHub</li>
+			<li class="next">Você pode copiar o endereço do diretório</li>
+			<li class="next">Como indicado na figura a seguir</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide cover"><div>
+		<img src="pictures/gitclone_link.jpg" alt="Link para clonagem">
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Agora é só alegria!</h2>
+		<ul>
+			<li class="next">Depois de copiado o link, agora é só incluir o comando git clone</li>
+			<li class="next">O comando ficará:</li>
+			<pre class="next">
+				<code>$ git clone https://github.com/J2MTecnologia/flisol_2014-oficina_git.git</code>
+			</pre>
+			<li class="next">Agora é só aguardar o processo de clonagem!</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Importante:</h2>
+		<ul>
+			<li>Em diretórios privados (private) talvez você precise informar seu usuário e senha</li>
+		</ul>
+	</div></section>
+
+	<section class="slide shout right"><div>
+		<h2>Populando Repositório</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Durante seu fluxo de trabalho</h2>
+		<ul>
+			<li class="next">Alterei um ou mais arquivos</li>
+			<li class="next">Verifico quais eu alterei</li>
+			<pre class="next">
+					<code>$ git status</code>
+			</pre>
+			<li class="next">Adiciono a alteração</li>
+			<pre class="next">
+					<code>$ git <mark class="important">add</mark> &&lt;arquivo&gt;</code>
+					<code>$ git add *</code>
+					<code>$ git add<mark class="important">--all</mark></code>
+			</pre>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>...</h2>
+		<ul>
+			<li class="next">Comito minhas modificações</li>
+			<pre class="next">
+				<code>$ git commit -m "comentários das alterações"</code>
+			</pre>
+			<li class="next">Alteração enviada (localmente)</li>
+		</ul>
+	</div></section>
+
+	<section class="slide shout right"><div>
+		<h2>Enviando modificações</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>...</h2>
+		<ul>
+			<li class="next">Comando de envio remoto</li>
+			<pre class="next">
+				<code>$ git push origin master</code>
+			</pre>
+			<li class="next">Alterações enviadas (remotamente)</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>...</h2>
+		<ul>
+			<li class="next">Caso não tenha clonado o diretório ainda</li>
+			<pre class="next">
+				<code>$ git remote add origin &&lt;servidor&gt;</code>
+			</pre>
+			<li class="next">Efetuando cópia remota</li>
+		</ul>
+	</div></section>
+
+	<section class="slide shout right"><div>
+		<h2>Ramificação</h2>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/branches.jpg" alt="Fluxo de Trabalho">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>...</h2>
+		<ul>
+			<li class="next">Criando uma nova branch chamada "funcionalidade_y"</li>
+			<pre class="next">
+				<code>$ git checkout <mark class="important">-b</mark> funcionalidade_x</code>
+				<code>$ git checkout master</code>
+			</pre>
+			<li class="next">neste mesmo comando já seleciona para utilização</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>...</h2>
+		<ul>
+			<li class="next">Removendo a branch</li>
+			<pre class="next">
+				<code>$ git branch -d funcionalidade_x</code>
+			</pre>
+			<li class="next">um branch não está disponível a outros a menos que você envie o branch para seu repositório remoto</li>
+			<pre>
+				<code>$ git push origin &&lt;funcionalidade_x&gt;</code>
+			</pre>
+		</ul>
+	</div></section>
+
+	<section class="slide shout right"><div>
+		<h2>Atualizar</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>...</h2>
+		<ul>
+			<li class="next">Sempre antes de começar seu trabalho</li>
+			<pre class="next">
+				<code>$ git pull</code>
+			</pre>
+		</ul>
+	</div></section>
+
+	<section class="slide shout right"><div>
+		<h2>Comparação</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Comparando uma branch com a outra</h2>
+		<ul>
+			<li class="next">Sempre antes de começar seu trabalho</li>
+			<pre class="next">
+				<code>$ git diff &&lt;branch origem&gt; &&lt;branch destino&gt;</code>
+			</pre>
+		</ul>
+	</div></section>
+
+	<section class="slide shout left"><div>
+		<h2>Rotular</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Versão estável de uma release</h2>
+		<ul>
+			<li class="next">Serve para dizer que naquele ponto do meu projeto, lancei uma versão estável</li>
+			<pre class="next">
+				<code>$ git tag 1.0.0 1b2e1d63ff</code>
+			</pre>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Otendo log do Git</h2>
+		<ul>
+			<li class="next">Para obter o id do commit, basta efetuar o seguinte comando:</li>
+			<pre class="next">
+				<code>$ git log</code>
+			</pre>
+			<li class="next">Também serve para informar tudo que foi feito naquela sessão ativa</li>
+		</ul>
+	</div></section>
+
+	<section class="slide shout down"><div>
+		<h2>Sobrescrevendo Alterações</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Otendo log do Git</h2>
+		<ul>
+			<li class="next">No caso de você ter feito algo errado (que seguramente nunca acontece ;) você pode sobrescrever as alterações locais usando o commando</li>
+			<pre class="next">
+				<code>$ git checkout -- &&lt;arquivo&gt;</code>
+				<code>$ git reset --all</code>
+			</pre>
+			<li class="next">Também serve para informar tudo que foi feito naquela sessão ativa</li>
+		</ul>
+	</div></section>
+
+
+
+	
+	<section class="slide"><div>
+		<h2>Critérios principais de avaliação</h2>
+		<ul>
+			<li class="next">Torna as mesmas questões do checklist disponíveis ao usuário.</li>
+			<li class="next">É importante para receber um feedback do usuário em relação ao seu sistema.</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Bibliografias</h2>
+		<ol>		
+			<li>GIT - GUIA PRÁTICO</li>
+			<a href="http://rogerdudler.github.io/git-guide/index.pt_BR.html" target="_blank">http://rogerdudler.github.io/git-guide/index.pt_BR.html</a>
+			<li>Git</li>
+			<a href="http://git-scm.com/" target="_blank">http://git-scm.com/</a>
+			<li>Documentação em Inglês</li>
+			<a href="http://git-scm.com/documentation" target="_blank">http://git-scm.com/documentation</a>
+			<li>Node GH - All the power of GitHub in your terminal</li>
+			<a href="http://nodegh.io/" target="_blank">http://nodegh.io/</a>
+		</ol>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Créditos</h2>
+		<ol>
+			<li>Sérgio Bezerra da Silva</li>
+			<a href="http://www.facebook.com/sergio.bezerradasilva" target="_blank">Perfil do Facebook</a> |
+			<a href="http://mrbreakbeat.github.io/about" target="_blank">Perfil Github</a> |
+			<a href="http://www.j2mtecnologia.com.br" target="_blank">J2M Tecnologia</a> |
+			<span>sergio@j2mtecnologia.com.br</span>
+		</ol>
+	</div></section>
+	<p class="badge"><a href="https://github.com/J2MTecnologia/flisol_2014-oficina_git">Fork me on Github</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../../shower.js"></script>
+	<!-- Copyright © 2013 Yours Truly, Famous Inc. -->
+</body>
+</html>
